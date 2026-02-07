@@ -44,7 +44,7 @@ function App() {
         <button onClick={handleSubmit}>Submit</button>
       </div>
 
-      <div>
+      <div className="records">
         {
           records.map(
             (v, i) => {
