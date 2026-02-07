@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css"
 
 function App() {
   let [budget, setBudget] = useState(100)
@@ -30,15 +31,18 @@ function App() {
 
   return (
     <>
+    <div className="parent">
       <label>
         <h1>Total Budget - {budget}</h1>
       </label>
       <br /><br />
-      <label> Name <input type="text" name='name' value={expense.name} onChange={handleChange} /> </label>
-      <br /><br />
-      <label> Expense <input type="number" name="spent" value={expense.spent} onChange={handleChange} /></label>
-      <br /><br />
-      <button onClick={handleSubmit}>Submit</button>
+      
+        <label> Name <input type="text" name='name' value={expense.name} onChange={handleChange} /> </label>
+        <br /><br />
+        <label> Expense <input type="number" name="spent" value={expense.spent} onChange={handleChange} /></label>
+        <br /><br />
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
 
       <div>
         {
